@@ -19,7 +19,7 @@ __author__ = 'Cheech Wife'
 
 
 class SymbolTable(object):  #attributes of symbolTable Class
-    def __init__(self):
+    def __init__(self):  #initialize with preset values
         self.table = {'SP': bin(0), 'LCL': bin(1),
               'ARG': bin(2), 'THIS': bin(3),
               'THAT': bin(4), 'R0': bin(0),

@@ -1,10 +1,8 @@
 __author__ = 'Cheech Wife'
-# Symbol table API:
+# API:
 # Look for symbols "(, ), @"
 # add location for symbol into table
 # update table (dictionary in this instance)
-#
-# #
 
 # PreAssigned memory location are as Follows:
 # SP - (hex 00000, bin 0000000000000000)
@@ -15,8 +13,6 @@ __author__ = 'Cheech Wife'
 # R0-R15 - (hex 000[0-15], bin 000000000000[0-1111])
 # SCREEN - (hex 04000, bin 0100000000000000)
 # KBD - (hex 06000, bin 0110000000000000)
-
-
 
 class SymbolTable(object):  #attributes of symbolTable Class
     def __init__(self):  #initialize with preset values
@@ -41,7 +37,3 @@ class SymbolTable(object):  #attributes of symbolTable Class
         print (inTable)
     def addEntry (self, newSymbol, location):
         self.table [newSymbol] = bin(location)
-
-
-
-

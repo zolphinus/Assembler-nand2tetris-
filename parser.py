@@ -14,8 +14,10 @@ class Parser(object):
         self.asmFile = open(inputFile, "r")
         self.hackFile = open(outputFile, "w")
         self.checkIt = open("Check.txt", "w")
+        
     def __del__(self):
         print ('end')
+
     def hasMoreCommands(self):
         currentCommand = self.asmFile.readline()
         print (currentCommand)
@@ -26,6 +28,7 @@ class Parser(object):
         else:
             print ('Not Empty')
             return True
+
     def advanceInFile(self):
         asmInstructions = self.asmFile.readline()
         cIndex = asmInstructions.find("/")
@@ -33,6 +36,7 @@ class Parser(object):
         asmInstructions = asmInstructions.strip()
         print(asmInstructions)
         return asmInstructions
+
     def parseFile(self, asmInstructions):
         if asmInstructions == '':
             print ('Empty')
